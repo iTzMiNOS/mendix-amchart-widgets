@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<widget id="coinapp.amchartsline.AmchartsLine" pluginWidget="true" needsEntityContext="true" offlineCapable="true"
+        supportedPlatform="Web"
+        xmlns="http://www.mendix.com/widget/1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.mendix.com/widget/1.0/ ../node_modules/mendix/custom_widget.xsd">
+    <name>Amcharts Line</name>
+    <description>My widget description</description>
+    <icon/>
+    <properties>
+        <propertyGroup caption="Data">
+            <property key="widgetData" type="datasource" isList="true" required="true">
+                <caption>Data</caption>
+                <description>Data Description</description>
+            </property>
+            <property key="widgetId" type="attribute" dataSource="widgetData" required="true">
+                <caption>LineChart ID</caption>
+                <description>LineChart ID Description</description>
+                <attributeTypes>
+                    <attributeType name="String" />
+                </attributeTypes>
+            </property>
+            <property key="widgetPrice" type="attribute" dataSource="widgetData" required="true">
+                <caption>LineChart Price</caption>
+                <description>LineChart Price Description</description>
+                <attributeTypes>
+                    <attributeType name="Decimal" />
+                    <attributeType name="Integer" />
+                </attributeTypes>
+            </property>
+            <property key="widgetChange" type="attribute" dataSource="widgetData" required="true">
+                <caption>LineChart Change</caption>
+                <description>LineChart Change Description</description>
+                <attributeTypes>
+                    <attributeType name="Decimal" />
+                    <attributeType name="Integer" />
+                </attributeTypes>
+            </property>
+        </propertyGroup>
+    </properties>
+</widget>

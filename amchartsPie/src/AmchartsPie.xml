@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<widget id="coinapp.amchartspie.AmchartsPie" pluginWidget="true" needsEntityContext="true" offlineCapable="true"
+        supportedPlatform="Web"
+        xmlns="http://www.mendix.com/widget/1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.mendix.com/widget/1.0/ ../node_modules/mendix/custom_widget.xsd">
+    <name>Amcharts Pie</name>
+    <description>AmchartsPieChart</description>
+    <icon/>
+    <properties>
+        <propertyGroup caption="General">
+            <property key="title" type="string" required="false">
+                <caption>Chart Title</caption>
+                <description>Chart Title Description</description>
+            </property>
+        </propertyGroup>
+        <propertyGroup caption="Data">
+            <property key="widgetData" type="datasource" isList="true" required="true">
+                <caption>Data</caption>
+                <description>Data Description</description>
+            </property>
+            <property key="widgetCategory" type="attribute" dataSource="widgetData" required="true">
+                <caption>Pie Chart Categories</caption>
+                <description>Pie Chart Categories Description</description>
+                <attributeTypes>
+                    <attributeType name="String" />
+                </attributeTypes>
+            </property>
+            <property key="widgetValue" type="attribute" dataSource="widgetData" required="true">
+                <caption>Pie Chart Values</caption>
+                <description>Pie Chart Value Description</description>
+                <attributeTypes>
+                    <attributeType name="Decimal" />
+                    <attributeType name="Integer" />
+                </attributeTypes>
+            </property>
+            <property key="widgetFunction" type="enumeration" required="true" defaultValue="sum">
+                <caption>Function</caption>
+                <description>Select a function for Widget Value</description>
+                <enumerationValues>
+                    <enumerationValue key="sum">Summation</enumerationValue>
+                    <enumerationValue key="max">Maximum</enumerationValue>
+                    <enumerationValue key="min">Minimum</enumerationValue>
+                </enumerationValues>
+            </property>
+        </propertyGroup>
+        <propertyGroup caption="Events">
+            <property key="onClickChart" type="action"  required="false">
+                <caption>onClick</caption>
+                <description>Action on chart Click</description>
+            </property>
+            <property key="actionName" type="string" required="false" defaultValue="Action">
+                <caption>Action Name</caption>
+                <description>Action Name Description</description>
+            </property>
+        </propertyGroup>
+    </properties>
+</widget>

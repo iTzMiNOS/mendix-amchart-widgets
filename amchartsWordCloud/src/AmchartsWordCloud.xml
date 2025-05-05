@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<widget id="coinapp.amchartswordcloud.AmchartsWordCloud" pluginWidget="true" needsEntityContext="true" offlineCapable="true"
+        supportedPlatform="Web"
+        xmlns="http://www.mendix.com/widget/1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.mendix.com/widget/1.0/ ../node_modules/mendix/custom_widget.xsd">
+    <name>Amcharts Word Cloud</name>
+    <description>Amcharts WordCloud Description</description>
+    <icon/>
+    <properties>
+        <propertyGroup caption="Data">
+            <property key="widgetData" type="datasource" isList="true" required="true">
+                <caption>Data</caption>
+                <description>Data Description</description>
+            </property>
+            <property key="widgetString" type="attribute" dataSource="widgetData" required="true">
+                <caption>World Cloud Strings</caption>
+                <description>Must be of type String</description>
+                <attributeTypes>
+                    <attributeType name="String"/>
+                </attributeTypes>
+            </property>
+            <property key="widgetWeight" type="attribute" dataSource="widgetData" required="true">
+                <caption>World Cloud Weights</caption>
+                <description>Must be of type Decimal or Integer</description>
+                <attributeTypes>
+                    <attributeType name="Integer"/>
+                    <attributeType name="Decimal"/>
+                </attributeTypes>
+            </property>
+        </propertyGroup>
+        <propertyGroup caption="Events">
+            <property key="onClickCloud" type="action" required="false">
+                <caption>onClick</caption>
+                <description>Action on Cloud Click</description>
+            </property>
+        </propertyGroup>
+        <propertyGroup caption="Features">
+            <property key="widgetColor" type="string" required="true" defaultValue="000000">
+                <caption>World Cloud Color</caption>
+                <description>Six Digit Hex Codes</description>
+            </property>
+            <property key="widgetWidth" type="integer" required="true" defaultValue="500">
+                <caption>World Cloud Width</caption>
+                <description>Width in pixels (Integer)</description>
+            </property>
+            <property key="widgetHeight" type="integer" required="true" defaultValue="300">
+                <caption>World Cloud Height</caption>
+                <description>Height in pixels (Integer)</description>
+            </property>
+        </propertyGroup>
+    </properties>
+</widget>
